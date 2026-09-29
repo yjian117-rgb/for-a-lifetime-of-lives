@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>For a Lifetime of Lives</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Slabo+13px&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+  <script src="assets/lib/p5.min.js"></script>
+</head>
+<body>
+
+  <div class="rail rail-left" id="rail-left" role="button" aria-label="previous week">
+    <div class="column" id="col-left" aria-hidden="true"></div>
+  </div>
+
+  <div class="rail rail-right" id="rail-right" role="button" aria-label="next week">
+    <div class="column" id="col-right" aria-hidden="true"></div>
+    <p id="copy"></p>
+  </div>
+
+  <button id="sound-toggle" class="rail-sound">sound: on</button>
+
+  <main id="stage">
+    <div id="track">
+      <section class="panel">
+        <div class="panel-scroll" tabindex="-1">
+          <div class="content">
+            <img class="artwork" src="assets/week1.svg" alt="week 1">
+          </div>
+        </div>
+      </section>
+
+      <section class="panel">
+        <div class="panel-scroll" tabindex="-1">
+          <div class="content">
+            <img class="artwork" src="assets/week2.svg" alt="week 2">
+          </div>
+        </div>
+      </section>
+
+      <section class="panel">
+        <div class="panel-scroll" tabindex="-1">
+          <div class="content">
+            <img class="artwork" src="assets/week3.png" alt="week 3">
+          </div>
+        </div>
+      </section>
+
+      <section class="panel">
+        <div class="panel-scroll" tabindex="-1">
+          <div class="content" id="w4-content">
+            <img class="artwork" id="w4-bg" src="assets/week4/bg.svg" alt="week 4 background">
+            <img class="suitcase" id="suitcase-closed" src="assets/week4/suitcase-closed.svg" alt="closed suitcase">
+            <img class="suitcase" id="suitcase-open" src="assets/week4/suitcase-open.svg" alt="open suitcase" hidden>
+            <div id="final-stage">
+              <video id="w4-camera" autoplay playsinline muted></video>
+              <img id="w4-final-poster" src="assets/week4/poster-final.svg" alt="final poster">
+            </div>
+            <div id="w4-canvas-host"></div>
+          </div>
+        </div>
+      </section>
+    </div>
+  </main>
+
+  <audio id="track-a" src="assets/audio-weeks123.mp3" loop preload="auto"></audio>
+  <audio id="track-b" src="assets/week4/audio.m4a" loop preload="auto"></audio>
+
+  <script src="sketch.js"></script>
+</body>
+</html>
